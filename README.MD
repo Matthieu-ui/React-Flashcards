@@ -1,8 +1,8 @@
-# Web Development Project 2 - *Name of App Here*
+# Web Development Project 2 - *React-Flashcards*
 
-Submitted by: **Your Name Here**
+Submitted by: **Matthieu Felker**
 
-This web app: **insert description**
+This web app: **Allows users to navigate through flashcards for studying React and Javascript interview questions. This app is built using React and TailwindCSS and takes advantage of useState, useEffect, and props to manage state and pass data between components as well as the use of the React Router to create a single page application.**
 
 Time spent: **X** hours spent in total
 
@@ -45,7 +45,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [Matthieu Felker]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
