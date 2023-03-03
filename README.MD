@@ -11,9 +11,9 @@ Time spent: **X** hours spent in total
 The following **required** functionality is completed:
 
 - [ ] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [ ] **A single card at a time is displayed, only showing one of the components of the information pair**
+- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
 - [ ] **A list of card pairs is created**
-- [ ] **Clicking on the card shows the corresponding component of the information pair**
+- [x] **Clicking on the card shows the corresponding component of the information pair**
 - [ ] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
@@ -41,7 +41,7 @@ GIF created with ...
 
 ## Notes
 
-prevCard function was looping through the cardObject array even after it has already found the matching card index, which was causing a bug where the card would not change. I fixed this by using the `findIndex` method to find the index of the current card in the `cardObject` array and then calculating the index of the previous card based on that. 
+`prevCard` function was looping through the `cardObject` array even after it had already found the matching card index, which was causing a bug where the card would not change. I fixed this by using the `findIndex` method to find the index of the current card in the `cardObject` array and then calculating the index of the previous card based on that. 
 ## License
 
     Copyright [2023] [Matthieu Felker]
