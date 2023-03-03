@@ -2,6 +2,7 @@ import { useState } from "react"
 import CardData from "./cardData"
 import CardNav from "./cardNav"
 
+
 const cardContent = () => {
 
     // import the array of objects from cardData.jsx    
@@ -11,6 +12,11 @@ const cardContent = () => {
     // card will be the first card in the array of objects
     // setCard will change the state of the card to display the next card in the array
     const [card, setCard] = useState(cardObject[0])
+
+    // use the useState hook to create a state variable called numCards
+    const [numCards] = useState(cardObject.length)
+
+    const [categoryIcon] = useState(cardObject[0].category)
 
     // flip card to show answer and hide answer
     const [buttonText, setButtonText] = useState("Show Answer"); // set initial button text to "Show Answer"
@@ -41,34 +47,35 @@ const cardContent = () => {
         }
       }
     };
-    
+
     const prevCard = () => {
-      for (let i = 0; i < cardObject.length; i++) { // loop through cardObject
-        if (card.cardID === i) { // if cardID matches index
-          setCard(cardObject[i - 1]); // set card to previous card
-          setShowAnswer(false); // hide answer
-          setButtonText("Show Answer"); // reset button text
-          if (i === 0) { // if cardID is 0
-            setCard(cardObject[cardObject.length - 1]); // set card to last card in array
-            setShowAnswer(false); // hide answer
-            setButtonText("Show Answer"); // reset button text
-          }
-          break;
-        }
-      }
+      const currentCardIndex = cardObject.findIndex(c => c.cardID === card.cardID); // find index of current card
+      // if current card is first card in array, set previous card to last card in array, else set previous card to current card - 1
+      const previousCardIndex = currentCardIndex === 0 ? cardObject.length - 1 : currentCardIndex - 1; 
+      const previousCard = cardObject[previousCardIndex]; // set previous card to cardObject at previousCardIndex
+      setCard(previousCard);
+      setShowAnswer(false);
+      setButtonText("Show Answer");
     };
+
 
     return ( 
       // card container
-        <div className="container mx-auto p-10 m-10">
-        <div className="relative w-full h-96">
+        <div className="container mx-auto w-1/2 max-sm:w-full max-sm:p-4 drop-shadow-2xl mx-auto">
+        {/* number of cards */}
+        <div className="flex justify-center items-center mb-10">
+          <p className="font-thin">Number of cards: {numCards}</p>
+        </div>
+        
+        <div className="relative w-full h-96 bg-primary">
 
           {/* Front of card */}
-          <div className={`w-full h-full rounded-md bg-white ${showAnswer ? "hidden" : "block"} transition-transform duration-500 transform ${showAnswer ? "-rotate-y-180" : "rotate-y-0"} bg-[url('./src/assets/paper-texture.jpg')] overflow-y-auto`}>
+          <div className={`w-full h-full rounded-md bg-content bg-top bg-left bg-gradient bg-repeat ${showAnswer ? "hidden" : "block"} transition-transform duration-500 transform ${showAnswer ? "-rotate-y-180" : "rotate-y-0"} overflow-y-auto`}>
             <div className="h-full flex flex-col justify-center">
               <div className="p-4">
                 <h2 className="font-sans font-semibold question">{card.question}</h2>
-                <p className="font-thin">Card ID: {card.cardID}</p>
+                <p className="absolute top-0 left-0 m-4 font-thin">Card ID: {card.cardID}</p>
+                <p className="absolute top-0 right-0 m-4 font-thin drop-shadow-2xl ">{categoryIcon}</p>
               </div>
               <div className="flex justify-center items-center absolute w-full bottom-4">
                 <CardNav nextCard={nextCard} prevCard={prevCard} flipCard={flipCard} buttonText={buttonText} />
@@ -77,11 +84,12 @@ const cardContent = () => {
           </div>
       
           {/* Back of card */}
-          <div className={`w-full h-full rounded-md bg-white ${showAnswer ? "block" : "hidden"} transition-transform duration-500 transform ${showAnswer ? "rotate-y-0" : "-rotate-y-180"} bg-[url('./src/assets/paper-texture.jpg')] overflow-y-auto`}>
+          <div className={`w-full h-full rounded-md bg-content bg-top bg-left  bg-50 bg-gradient bg-repeat ${showAnswer ? "block" : "hidden"} transition-transform duration-500 transform ${showAnswer ? "rotate-y-0" : "-rotate-y-180"} overflow-y-auto`}>
             <div className="h-full flex flex-col justify-center">
               <div className="p-4">
                 <h2 className="font-sans font-semibold answer">{card.answer}</h2>
-                <p className="font-thin">Card ID: {card.cardID}</p>
+                <p className="absolute top-0 left-0 m-4 font-thin">Card ID: {card.cardID}</p>
+                <p className="absolute top-0 right-0 m-4 font-thin drop-shadow-2xl">{categoryIcon}</p>
               </div>
 
               {/* button navigation */}

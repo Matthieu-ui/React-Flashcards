@@ -41,8 +41,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-
+prevCard function was looping through the cardObject array even after it has already found the matching card index, which was causing a bug where the card would not change. I fixed this by using the `findIndex` method to find the index of the current card in the `cardObject` array and then calculating the index of the previous card based on that. 
 ## License
 
     Copyright [2023] [Matthieu Felker]

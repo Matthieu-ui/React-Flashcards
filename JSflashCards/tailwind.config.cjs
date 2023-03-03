@@ -6,16 +6,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-pattern': "url('./src/assets/paper-texture.jpg')",
-        'footer-texture': "url('/img/footer-texture.png')",
+      backgroundColor: {
+        'primary': '#434343',
+        'gradient': 'linear-gradient(#434343, #282828)',
       },
-// transform style the card to flip when the user clicks the button
-      transitionProperty: {
-        "transform-style": "preserve-3d",
-  
-    },
-  },
+      backgroundImage: {
+        'content': 'linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent)',
+      },
+      backgroundSize: {
+        'content': '50px 50px',
+      },
+},
 
 },
   plugins: [],
