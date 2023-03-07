@@ -24,7 +24,10 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [X] List anything else that you added to improve the site's functionality!
+
+Implemented TailwindCSS to style the app and make it responsive.
+Implemented React Router to create a single page application with the intent of adding more pages in the future.
 
 ## Video Walkthrough
 
