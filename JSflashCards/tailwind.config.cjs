@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       backgroundColor: {
         'primary': '#434343',
+        'secondary': '#134e4a',
+        
         'gradient': 'linear-gradient(#434343, #282828)',
       },
       backgroundImage: {
