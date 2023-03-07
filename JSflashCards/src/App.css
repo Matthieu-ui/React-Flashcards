@@ -21,3 +21,48 @@ html{
     padding: 0 0 0 0;
   }
 }
+
+/* smooth flip  animation on click flip button*/
+
+/*     const card = document.querySelector(".bg-content");
+    card.classList.toggle("flip"); */
+
+.flip {
+
+  animation: flip 500ms;
+  animation-fill-mode: forwards;
+}
+
+.bg-content {
+
+  animation: flip 200ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+/* keep text from flipping by rotating it 180 degrees */
+
+
+@keyframes flip {
+
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg)
+  }
+
+}
+
+
+
+/* smooth flip  animation on click flip button*/
+
+/*     const card = document.querySelector(".bg-content");
+    card.classList.toggle("flip"); */
+

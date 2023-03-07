@@ -18,7 +18,18 @@ module.exports = {
       backgroundSize: {
         'content': '50px 50px',
       },
-},
+      'cardFlip': {
+        '1': {
+          transform: 'rotateY(0deg)',
+          "backface-visibility": "hidden",
+          "z-index": "1",
+          "box-shadow": "0 0 0 0 rgba(0, 0, 0, 0.5)",
+          "#134e4a": "0 0 0 0 rgba(0, 0, 0, 0.5)",
+          "0 0 0 0 rgba(0, 0, 0, 0.5)": "0 0 0 0 rgba(0, 0, 0, 0.5)",
+        },
+      },
+    },
+
 
 },
   plugins: [],

@@ -22,14 +22,21 @@ const cardContent = () => {
   const [showAnswer, setShowAnswer] = useState(false); // set initial state of answer to false
 
   const flipCard = () => {
-    if (showAnswer === true) { // if showAnswer is true
-      setButtonText("Show Answer"); // change button text to "Show Answer"
-      setShowAnswer(false); // hide answer
-    } else if (showAnswer === false) { // if showAnswer is false
-      setButtonText("Hide Answer"); // change button text to "Hide Answer"
-      setShowAnswer(true); // show answer
+     // flip animation on click
+    const card = document.querySelector(".bg-content");
+    card.classList.toggle("flip");
+
+    // if showAnswer is false, set showAnswer to true and change button text to "Show Question"
+
+    if (!showAnswer) {
+      setShowAnswer(true);
+      setButtonText("Show Question");
+    } else {
+      setShowAnswer(false);
+      setButtonText("Show Answer");
     }
   };
+
 
   const nextCard = () => {
     for (let i = 0; i < cardObject.length; i++) { // loop through cardObject
@@ -80,30 +87,30 @@ const cardContent = () => {
       <div className="relative w-full h-96">
 
         {/* Front of card */}
-        <div className={` bg-primary w-full h-full rounded-md bg-content bg-top bg-left bg-gradient bg-repeat ${showAnswer ? "hidden" : "block"} ${showAnswer}`}>
+        <div className={`flip bg-primary w-full h-full rounded-md bg-content bg-top bg-left bg-gradient bg-repeat ${showAnswer ? "hidden" : "block"} ${showAnswer}`}>
           <div className="h-full flex flex-col justify-center">
             <div className="p-4">
-              <h2 className="font-sans text-zinc-100 drop-shadow-md font-semibold question">{card.question}</h2>
-              <p className="absolute top-0 left-0 m-4 font-thin text-zinc-100 drop-shadow-md">Card ID: {card.cardID}</p>
+              <h2 className="bg-content font-sans text-zinc-100 drop-shadow-md font-semibold question">{card.question}</h2>
+              <p className="bg-content absolute top-0 left-0 m-4 font-thin text-zinc-100 drop-shadow-md">Card ID: {card.cardID}</p>
               <p className="absolute top-0 right-0 m-4 font-thin drop-shadow-2xl ">{categoryIcon}</p>
             </div>
-            <div className="flex justify-center items-center absolute w-full bottom-4">
+            <div className="bg-content flex justify-center items-center absolute w-full bottom-4">
               <CardNav nextCard={nextCard} prevCard={prevCard} flipCard={flipCard} randomCard={randomCard} buttonText={buttonText} />
             </div>
           </div>
         </div>
 
         {/* Back of card */}
-        <div className={`bg-secondary w-full h-full rounded-md bg-content bg-top bg-left  bg-50 bg-gradient bg-repeat ${showAnswer ? "block" : "hidden"} ${showAnswer} `}>
+        <div className={`flip bg-primary w-full h-full rounded-md bg-content bg-top bg-left  bg-50 bg-gradient bg-repeat ${showAnswer ? "block" : "hidden"} ${showAnswer} `}>
           <div className="h-full flex flex-col justify-center">
             <div className="p-4">
-              <h2 className="font-sans font-semibold answer text-zinc-100 drop-shadow-md">{card.answer}</h2>
-              <p className="absolute top-0 left-0 m-4 font-thin text-zinc-100 drop-shadow-md">Card ID: {card.cardID}</p>
+              <h2 className="bg-content font-sans font-semibold answer text-zinc-100 drop-shadow-md">{card.answer}</h2>
+              <p className="bg-content absolute top-0 left-0 m-4 font-thin text-zinc-100 drop-shadow-md">Card ID: {card.cardID}</p>
               <p className="absolute top-0 right-0 m-4 font-thin drop-shadow-2xl">{categoryIcon}</p>
             </div>
 
             {/* button navigation */}
-            <div className="flex justify-center items-center absolute w-full bottom-4">
+            <div className="bg-content flex justify-center items-center absolute w-full bottom-4">
               <CardNav nextCard={nextCard} prevCard={prevCard} flipCard={flipCard} buttonText={buttonText} />
 
             </div>
