@@ -12,13 +12,13 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
 
     return (
-        <nav className="bg-gray-800 px-4 py-2 rounded-sm shadow-md">
+        <nav className="border border-b-slate-500 border-l-slate-500 border-r-slate-500 p-2 px-4 py-2 rounded-sm">
         <ul className="flex items-center justify-between">
             <li>
-            <Link to="/" className="text-white hover:text-gray-300 font-mono font-bold text-xl">Home</Link>
+            <Link to="/" className=" hover:text-gray-600 font-mono font-bold text-xl">Home</Link>
             </li>
             <li>
-            <Link to="/react" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">React</Link>
+            <Link to="/react" className=" hover:text-gray-600 px-3 py-2 text-sm font-medium">React</Link>
             </li>
         
         </ul>

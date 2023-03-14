@@ -12,10 +12,10 @@ const ReactPage = () => {
         <div>
     
         <NavBar />
-        <div className='flex flex-col items-center justify-center bg-slate-600 min-h-screen'>   
+        <div className='flex flex-col items-center justify-center min-h-screen'>   
       
-        <h1 className='text-4xl text-white font-bold'>React Flash Cards</h1>
-        <p className='text-2xl text-white font-bold'>Test your knowledge of React</p>
+        <h1 className='text-4xl font-bold'>React Flash Cards</h1>
+        <p className='text-2xl font-bold'>Test your knowledge of React</p>
 
         <FlashCard />
        

@@ -7,13 +7,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'primary': '#434343',
+        'primary': '#134e4a',
         'secondary': '#134e4a',
         
         'gradient': 'linear-gradient(#434343, #282828)',
       },
       backgroundImage: {
-        'content': 'linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent)',
+        'content': 'linear-gradient(0deg, transparent 24%, rgba(69, 58, 255, 0.08) 25%, rgba(69, 58, 255, 0.08) 26%, transparent 27%, transparent 74%, rgba(69, 58, 255, 0.08) 75%, rgba(69, 58, 255, 0.08) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(69, 58, 255, 0.08) 25%, rgba(69, 58, 255, 0.08) 26%, transparent 27%, transparent 74%, rgba(69, 58, 255, 0.08) 75%, rgba(69, 58, 255, 0.08) 76%, transparent 77%, transparent)',
       },
       backgroundSize: {
         'content': '50px 50px',

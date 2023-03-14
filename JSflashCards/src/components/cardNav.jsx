@@ -12,7 +12,5 @@ const cardNav = (props) => {
 }
 
 export default cardNav;
-
-
-    
-    
+  
+// Path: src\components\card.jsx        

@@ -20,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/react",
     element: <ReactPage />,
+    errorElement: <ErrorPage />,
   }
 
 ]);
@@ -28,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
 
-    <main className='bg-slate-600 min-h-screen flex flex-col drop-shadow-lg'>
+    <main className='min-h-screen flex flex-col drop-shadow-lg'>
     <RouterProvider router={router} />
     <App />
     </main>
