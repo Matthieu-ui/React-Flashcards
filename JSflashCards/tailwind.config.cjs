@@ -13,7 +13,7 @@ module.exports = {
         'gradient': 'linear-gradient(#434343, #282828)',
       },
       backgroundImage: {
-        'content': 'linear-gradient(0deg, transparent 24%, rgba(69, 58, 255, 0.08) 25%, rgba(69, 58, 255, 0.08) 26%, transparent 27%, transparent 74%, rgba(69, 58, 255, 0.08) 75%, rgba(69, 58, 255, 0.08) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(69, 58, 255, 0.08) 25%, rgba(69, 58, 255, 0.08) 26%, transparent 27%, transparent 74%, rgba(69, 58, 255, 0.08) 75%, rgba(69, 58, 255, 0.08) 76%, transparent 77%, transparent)',
+        'content': 'linear-gradient(0deg, transparent 24%, rgba(69, 58, 255, 0.20) 25%, rgba(69, 58, 255, 0.20) 26%, transparent 27%, transparent 74%, rgba(69, 58, 255, 0.20) 75%, rgba(69, 58, 255, 0.20) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(69, 58, 255, 0.20) 25%, rgba(69, 58, 255, 0.20) 26%, transparent 27%, transparent 74%, rgba(69, 58, 255, 0.20) 75%, rgba(69, 58, 255, 0.20) 76%, transparent 77%, transparent)',
       },
       backgroundSize: {
         'content': '50px 50px',

@@ -10,6 +10,9 @@ import Root from "./routes/Root";
 import ErrorPage from './404';
 import ReactPage from './routes/ReactPage';
 import NodePage from './routes/NodePage';
+import MongoPage from './routes/MongoPage';
+import TailwindPage from './routes/TailwindPage';
+import AllCardsPage from './routes/AllCardsPage';
 
 
 const router = createBrowserRouter([
@@ -29,7 +32,27 @@ const router = createBrowserRouter([
     element: <NodePage />,
     errorElement: <ErrorPage />,
 
-  }
+  },
+
+  {
+    path: "/mongodb",
+    element: <MongoPage />,
+    errorElement: <ErrorPage />,
+  },
+
+  {
+    path: "/css",
+    element: <TailwindPage />,
+    errorElement: <ErrorPage />,
+
+  },
+
+  {
+    path: "/knowitall",
+    element: <AllCardsPage />,
+    errorElement: <ErrorPage />,
+  },
+
 
 ]);
 

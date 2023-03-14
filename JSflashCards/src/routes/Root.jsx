@@ -20,7 +20,7 @@ const Root = () => {
         <Link to="/node" className="px-3 py-2 text-sm font-medium hover:scale-110 transition-transform drop-shadow-xl"> <Icon className='text-8xl' icon="skill-icons:nodejs-dark" /></Link>
         <Link to="/mongodb" className="px-3 py-2 text-sm font-medium hover:scale-110 transition-transform drop-shadow-xl"> <Icon className='text-8xl' icon="skill-icons:mongodb" /></Link>
         <Link to="/css" className="px-3 py-2 text-sm font-medium hover:scale-110 transition-transform drop-shadow-xl"> <Icon className='text-8xl' icon="skill-icons:tailwindcss-dark" /></Link>
-        <Link to="/python" className="px-3 py-2 text-sm font-medium hover:scale-110 transition-transform drop-shadow-xl"> <Icon className='text-8xl' icon="skill-icons:git" /></Link>
+        <Link to="/knowitall" className="px-3 py-2 text-sm font-medium hover:scale-110 transition-transform drop-shadow-xl"> <Icon className='text-8xl' icon="fluent-emoji:brain" /></Link>
         </div>
 
     

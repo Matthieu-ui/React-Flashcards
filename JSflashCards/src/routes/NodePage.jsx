@@ -1,4 +1,4 @@
-import NodeTest from "../components/NodeTest";
+import NodeCard from "../components/cards/NodeCard";
 import NavBar from "../components/NavBar";
 // import { Icon } from '@iconify-icon/react';
 
@@ -15,7 +15,7 @@ const ReactPage = () => {
         <div className='flex flex-col items-center justify-center min-h-screen'>   
 
 
-        <NodeTest/>
+        <NodeCard/>
        
         </div>
 
