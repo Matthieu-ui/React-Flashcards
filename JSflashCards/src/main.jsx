@@ -9,6 +9,7 @@ import {
 import Root from "./routes/Root";
 import ErrorPage from './404';
 import ReactPage from './routes/ReactPage';
+import NodePage from './routes/NodePage';
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,13 @@ const router = createBrowserRouter([
     path: "/react",
     element: <ReactPage />,
     errorElement: <ErrorPage />,
+  },
+
+  {
+    path: "/node",
+    element: <NodePage />,
+    errorElement: <ErrorPage />,
+
   }
 
 ]);
